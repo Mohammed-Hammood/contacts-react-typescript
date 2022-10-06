@@ -1,0 +1,111 @@
+@import '../common/variables.scss';
+@import '../common/mixins.scss';
+
+.home-page-container {
+    @include CENTER_H;
+    padding: 10px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+
+    .warning-container {
+        @include CENTER_H;
+        width: 100%;
+        background-color: white;
+        max-width: 500px;
+        color: black;
+        padding: 30px 10px;
+        border-radius: 10px;
+        border: 1px solid lightgray;
+        flex-direction: column;
+        gap: 10px;
+
+        div {
+            @include CENTER_H;
+        }
+
+        a {
+            text-decoration: none;
+            color: blue;
+            font-weight: bold;
+            display: block;
+        }
+
+        .required-login {
+            border-radius: 10px;
+            border: 5px;
+        }
+    }
+
+    .container {
+        @include CENTER_H;
+        width: 100%;
+        max-width: $maxWidth;
+        gap: 10px;
+        flex-direction: column;
+
+        .panel-container {
+            flex: 1 1 100%;
+            display: flex;
+            background-color: white;
+            color: black;
+            justify-content: space-between;
+            gap: 10px;
+            max-width: 500px;
+            flex: 1 1 100%;
+            padding: 10px;
+            border: 1px groove lightgray;
+            font-size: 13px;
+            border-radius: 12px;
+
+            div {
+                @include CENTER_HV;
+                gap: 6px;
+                cursor: default;
+
+                span {
+                    display: flex;
+                    align-items: center;
+                }
+
+                svg {
+                    width: 13px;
+                    height: 14px;
+                    cursor: pointer;
+                }
+            }
+
+            button {
+                background-color: blue;
+                border: none;
+                padding: 10px;
+                cursor: pointer;
+                flex: 1 1 50%;
+                color: white;
+                border-radius: 2px;
+                font-size: 15px;
+            }
+
+            button:active {
+                transform: translate3d(1px, 1px, 1px);
+            }
+
+            button:hover {
+                background-color: rgb(4, 0, 211);
+                color: white;
+            }
+        }
+
+        .contacts-list-container {
+            @include CENTER_H;
+            flex-direction: column;
+            gap: 10px;
+            max-width: 523px;
+            flex: 1 1 100%;
+            width: 100%;
+            font-size: 13px;
+            @import '../components/contacts.scss';
+        }
+
+    }
+}

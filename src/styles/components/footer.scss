@@ -1,0 +1,43 @@
+@import '../common/mixins.scss';
+
+footer {
+    background: black;
+    opacity: 0.8;
+    color: white;
+    padding: 15px;
+    @include CENTER_HV;
+    flex-direction: column;
+    gap:20px;
+    @include NO_SELECT;
+    margin-top:auto;
+    .top-content {
+        display: flex;
+        justify-content: space-around;
+        justify-items: center;
+        width:100%;
+        .left-content,
+        .right-content {
+            @include CENTER_HV;
+            flex-direction: column;
+            height: 100%;
+            gap: 10px;
+            font-size: 13px;
+
+            a {
+                color: white;
+                text-decoration: none;
+            }
+
+            a:hover {
+                color: blue;
+            }
+        }
+    }
+
+    .bottom-content {
+        @include CENTER_HV;
+        color:white;
+        width:100%;
+
+    }
+}

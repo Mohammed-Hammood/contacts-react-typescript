@@ -1,0 +1,19 @@
+@import '../common/variables.scss';
+@import '../common/mixins.scss';
+@import '../components/contacts.scss';
+
+.contact-detail-page-container {
+    @include CENTER_H;
+    padding: 10px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+
+    .container {
+        @include CENTER_H;
+        width: 100%;
+        max-width: $maxWidth;
+        gap: 10px;
+        flex-direction: column;
+    }
+}

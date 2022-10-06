@@ -1,0 +1,120 @@
+
+*, *::after, *::before {
+  padding:0;
+  margin:0;
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+}
+html {
+  height:100%;
+}
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-height:100%;
+  display: flex;
+  flex-direction: column;
+}
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+  min-height: calc(100vh - 50px);
+}
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.svg {
+  width:14px;
+}
+
+.loader {
+  width:100%;
+  height:100%;
+  position:fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 9;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+@keyframes LOADER {
+  from {
+      transform: rotate(0deg);
+  }
+  to{
+      transform: rotate(360deg);
+  }
+}
+.loader::after {
+  content:"";
+  display: block;
+  width:100px;
+  height:100px;
+  border-radius:50%;
+  border: 10px solid white;
+  border-top: 10px solid blue;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+  animation:LOADER 1s linear infinite;
+}
+
+.hidden {
+  display: none;
+}
+.show-f {
+  display:flex;
+}
+.show-i-b {
+  display:inline-block;
+}
+.show-b {
+  display:block;
+}
+.blur {
+  filter:blur(8px);
+}
+.red {
+  color:red;
+  font-weight: bold;
+}
+
+@keyframes BG_DARK {
+  from {
+    background-color:white;
+  }
+  to {
+    background-color: #3a3a3a;
+  }
+}
+@keyframes BG_LIGHT {
+  from {
+    background-color: #3a3a3a;
+  }
+  to {
+    background-color:white;
+  }
+}
+.bgLight {
+  background-color: white;
+  color:black;
+  animation: BG_LIGHT 1s linear 1;
+}
+.bgDark {
+  background-color: #3a3a3a;
+  color:white;
+  animation: BG_DARK 1s linear 1;
+}
