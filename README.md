@@ -1,6 +1,6 @@
 ## Contacts
 
-    The app deployed on: <a href='https://apifrontend.pythonanywhere.com' >Visit </a>
+    The app deployed on: https://apifrontend.pythonanywhere.com
 
 ## To run the app locally:
 
